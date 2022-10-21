@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductAjaxController;
+use App\Http\Controllers\EmployeeAjaxController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::resource('products-ajax-crud', ProductAjaxController::class);
+Route::resource('employees-ajax-crud', EmployeeAjaxController::class);
 
 Route::get('/', function () {
     return view('welcome');
